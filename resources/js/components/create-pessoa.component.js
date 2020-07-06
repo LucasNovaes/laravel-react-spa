@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import axios from 'axios'
-import PessoaList from './pessoas-listing.component';
 import Swal from 'sweetalert2';
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from 'mdbreact';
 import 'mdbreact/dist/css/mdb.css'
+import MediaQuery from 'react-responsive'
 
 
 export default class CreatePessoa extends Component {
@@ -77,7 +73,7 @@ export default class CreatePessoa extends Component {
             <MDBInput name="telefone" label="Telefone" type="tel" value={this.state.telefone} onChange={this.onChangePessoaTelefone} required></MDBInput>
             <MDBRow className="text-center">
               <MDBCol>
-                <MDBBtn className="btn-custom-color" color="primary" size="lg" type="submit">
+                <MDBBtn className="btn-custom" color="" size="lg" type="submit">
                     CADASTRAR
                 </MDBBtn>
               </MDBCol>

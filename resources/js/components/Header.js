@@ -6,13 +6,12 @@
 
 
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Navbar, NavItem, NavDropdown, MenuItem, Nav } from 'react-bootstrap';
 import logo from '../img/logo-in8-dev.svg'; // with import
-
+import iconNav from '../icons/hamburguer.svg'; // with import
 
     const Header = () => (
-<Navbar id="head" collapseOnSelect expand="lg" className="container">
+<Navbar id="head" collapseOnSelect expand="lg" fixed="top" className="container">
   <Navbar.Brand href="#">
     <img src={logo}
         width="100"
@@ -20,7 +19,9 @@ import logo from '../img/logo-in8-dev.svg'; // with import
         className="d-inline-block align-top"
         alt="IN8 logo" />
   </Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Toggle aria-controls="responsive-navbar-nav">
+    <span className="navbar-toggler-icon" style={{backgroundImage:`url(${iconNav})`}}></span>
+  </Navbar.Toggle>
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="ml-auto">
       <Nav.Link href="#create">cadastro</Nav.Link>

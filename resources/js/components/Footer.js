@@ -1,9 +1,10 @@
 import React from "react";
 import image from "../img/rodape-desktop.jpg";
+import image2 from "../img/rodape-mobile.jpg";
 
 const Footer = () => {
   return (
-  <div id="footer" className="p-4" style={{backgroundImage: `url(${image}`, backgroundRepeat: 'no-repeat' }}>
+  <div id="footer" className="footer-custom p-4 bg-footer">
     <div className="container text-center">
       <div className="row justify-content-center">
         <div className="col-md-7">

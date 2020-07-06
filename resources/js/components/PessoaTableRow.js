@@ -2,28 +2,21 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import { format } from 'date-fns';
 
 export default class PessoaTableRow extends Component {
     constructor(props) {
         super(props);
-        this.deletePessoa = this.deletePessoa.bind(this);
     }
 
-    deletePessoa() {
-        axios.delete('/api/pessoas/' + this.props.obj.id)
-            .then((res) => {
-                console.log('Pessoa removed deleted!')
-            }).catch((error) => {
-                console.log(error)
-            })
-    }
     render() {
         return (
             <tr>
-                <td>{this.props.obj.nome}</td>
-                <td>{this.props.obj.email}</td>
-                <td>{this.props.obj.nascimento}</td>
-                <td>{this.props.obj.telefone}</td>
+                <td style={{color: `#012d51`, fontFamily: `Roboto Light`}}>{this.props.obj.id}</td>
+                <td className="td-info">{this.props.obj.nome}</td>
+                <td className="td-info">{this.props.obj.email}</td>
+                <td className="td-info">{format(new Date(this.props.obj.nascimento),'dd/MM/yyyy')}</td>
+                <td className="td-info">{this.props.obj.telefone}</td>
             </tr>
         );
     }

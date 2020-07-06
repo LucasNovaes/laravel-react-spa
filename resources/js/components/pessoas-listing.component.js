@@ -38,24 +38,24 @@ export default class PessoaList extends Component {
       <Table bordered>
         <thead>
           <tr>
-            <th className="font-weight-bold">#</th>
-            <th className="font-weight-bold">Nome</th>
-            <th className="font-weight-bold">Email</th>
-            <th className="font-weight-bold">Nascimento</th>
-            <th className="font-weight-bold">Telefone</th>
+            <th className="font-weight-bold th-info">#</th>
+            <th className="font-weight-bold th-info">Nome</th>
+            <th className="font-weight-bold th-info">Email</th>
+            <th className="font-weight-bold th-info">Nascimento</th>
+            <th className="font-weight-bold th-info">Telefone</th>
           </tr>
         </thead>
         <tbody>
           {this.DataTable()}
           <tr>
-            <td>1</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
           </tr>
           <tr>
-            <td>2</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>

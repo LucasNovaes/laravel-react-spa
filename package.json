@@ -25,8 +25,11 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "@types/date-fns": "^2.6.0",
+        "date-fns": "^2.14.0",
         "mdbreact": "^4.27.0",
         "react-bootstrap": "^1.0.1",
+        "react-responsive": "^8.1.0",
         "react-router-dom": "^5.2.0",
         "sweetalert2": "^9.15.2"
     }

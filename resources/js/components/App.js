@@ -5,19 +5,20 @@ import Header from './Header'
 import Footer from './Footer'
 import 'bootstrap/dist/css/bootstrap.css';
 import image from "../img/index-image.jpg";
+import image2 from "../img/index-image-mobile.jpg";
 
 import Content from "./content.component";
 import EditPessoa from "./edit-pessoa.component";
 import PessoaList from "./pessoas-listing.component";
 import CreatePessoa from "./create-pessoa.component";
+import MediaQuery from 'react-responsive'
 
     class App extends Component {
       render () {
         return (
           <BrowserRouter>
-            <div className="logo" style={{backgroundImage: `url(${image}`, backgroundRepeat: 'no-repeat' }}>
+            <div className="logo bg-1">
               <Header />
-
               <Content />
               <CreatePessoa />
               <PessoaList />

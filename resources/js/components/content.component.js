@@ -1,8 +1,4 @@
 import React, { Component } from "react";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import axios from 'axios'
-import CreatePessoa from "./create-pessoa.component";
 
 export default class Content extends Component {
     constructor(props) {
