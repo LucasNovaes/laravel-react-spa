@@ -11,7 +11,7 @@ import 'mdbreact/dist/css/mdb.css'
 
 
 export default class CreatePessoa extends Component {
-      constructor(props) {
+  constructor(props) {
     super(props)
 
     // Setting up functions
@@ -31,24 +31,24 @@ export default class CreatePessoa extends Component {
   }
 
   onChangePessoaNome(e) {
-    this.setState({nome: e.target.value})
+    this.setState({ nome: e.target.value })
   }
 
   onChangePessoaNascimento(e) {
-    this.setState({nascimento: e.target.value})
+    this.setState({ nascimento: e.target.value })
   }
 
   onChangePessoaEmail(e) {
-    this.setState({email: e.target.value})
+    this.setState({ email: e.target.value })
   }
 
   onChangePessoaTelefone(e) {
-    this.setState({telefone: e.target.value})
+    this.setState({ telefone: e.target.value })
   }
 
   onSubmit(e) {
     e.preventDefault()
-     const pessoa = {
+    const pessoa = {
       nome: this.state.nome,
       nascimento: this.state.nascimento,
       email: this.state.email,
@@ -57,53 +57,33 @@ export default class CreatePessoa extends Component {
     axios.post('/api/pessoas/', pessoa)
       .then(res => console.log(res.data));
     Swal.fire(
-  'Bom trabalho!',
-  'Cadastro efetuado com sucesso!',
-  'success'
-)
+      '',
+      'Cadastro efetuado com sucesso!',
+      'success'
+    )
 
-    this.setState({nome: '', nascimento: '', email: '', telefone: ''})
+    this.setState({ nome: '', nascimento: '', email: '', telefone: '' })
   }
 
   render() {
     return (
-      <MDBContainer style={{backgroundColor: "#29abe2"}}>
-      <div id="create" className="form-wrapper">
-      <h3 className="sub-title text-center">CADASTRO</h3>
-      <form className="container col-md-4" onSubmit={this.onSubmit}>
-        <MDBRow> 
-            <MDBCol>
-                  <MDBInput name="nome" label="Nome" type="text" value={this.state.nome} onChange={this.onChangePessoaNome}></MDBInput>
-            </MDBCol>
-        </MDBRow>
-
-        <MDBRow>
-            <MDBCol>
-                        <MDBInput name="email" label="Email" type="text" value={this.state.email} onChange={this.onChangePessoaEmail}></MDBInput>
-            </MDBCol>  
-        </MDBRow>
-
-        <MDBRow>
-            <MDBCol>
-                <MDBInput name="nascimento" label="Nascimento" type="date" value={this.state.nascimento} onChange={this.onChangePessoaNascimento}></MDBInput>
-            </MDBCol>  
-        </MDBRow>
-            
-        <MDBRow>
-            <MDBCol>
-                <MDBInput name="telefone" label="Telefone" type="tel" value={this.state.telefone} onChange={this.onChangePessoaTelefone}></MDBInput>
-            </MDBCol>  
-        </MDBRow>
-        <MDBRow className="justify-content-md-center">
-            <MDBCol md="6">
-                <MDBBtn color="primary" size="lg" type="submit">
-                  CADASTRAR
+      
+        <div id="create" className="form-wrapper p-5 bg-full-blue">
+          <h3 className="text-center sub-title">CADASTRO</h3>
+          <form className="container col-md-5" onSubmit={this.onSubmit}>
+            <MDBInput name="nome" label="Nome" type="text" value={this.state.nome} onChange={this.onChangePessoaNome} required></MDBInput>
+            <MDBInput name="email" label="Email" type="text" value={this.state.email} onChange={this.onChangePessoaEmail} required></MDBInput>
+            <MDBInput name="nascimento" label="Nascimento" type="date" value={this.state.nascimento} onChange={this.onChangePessoaNascimento} required></MDBInput>
+            <MDBInput name="telefone" label="Telefone" type="tel" value={this.state.telefone} onChange={this.onChangePessoaTelefone} required></MDBInput>
+            <MDBRow className="text-center">
+              <MDBCol>
+                <MDBBtn className="btn-custom-color" color="primary" size="lg" type="submit">
+                    CADASTRAR
                 </MDBBtn>
-            </MDBCol>  
-        </MDBRow>
-      </form>
-    </div>
-    </MDBContainer>);
+              </MDBCol>
+            </MDBRow>
+          </form>
+        </div>);
   }
 }
 

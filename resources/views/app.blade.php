@@ -30,8 +30,25 @@
               color: white !important;
             }
             .form-wrapper .sub-title, .table-wrapper .sub-title{
-                padding-top: 40px;
+                padding-top: 30px;
                 padding-bottom: 30px;
+            }
+            .custom-color-blue {
+                color: #29abe2;
+            }
+            .btn-custom-color {
+                color: #29abe2;
+                background-color: #012d51 !important;
+            }
+            .bg-full-blue{
+                background-color: #29abe2;
+                background-repeat: 'no-repeat'
+            }
+            input {
+                color: #fff !important;
+            } 
+            label {
+                color: #fff !important;
             }
         </style>
     </head>
