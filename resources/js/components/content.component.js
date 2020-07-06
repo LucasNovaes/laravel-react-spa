@@ -7,7 +7,7 @@ export default class Content extends Component {
   render() {
 
 
-    return (<div className="container">
+    return (<div id="content" className="container">
       <section style={{height: 885}}>
         <h2 className="title">
           ESTÁGIO 

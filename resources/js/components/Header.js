@@ -11,7 +11,7 @@ import logo from '../img/logo-in8-dev.svg'; // with import
 import iconNav from '../icons/hamburguer.svg'; // with import
 
     const Header = () => (
-<Navbar id="head" collapseOnSelect expand="lg" fixed="top" className="container">
+<Navbar collapseOnSelect expand="lg" fixed="top" className="container">
   <Navbar.Brand href="#">
     <img src={logo}
         width="100"

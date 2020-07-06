@@ -63,7 +63,7 @@ export default class PessoaList extends Component {
           </tr>
         </tbody>
       </Table>
-      <a className="float-right" href="#head">
+      <a className="float-right" href="#content">
         <img src={arrow}
           width="100"
           height="30"
